@@ -1,0 +1,33 @@
+{
+  "name": "@packfile/packfile-ts",
+  "version": "0.0.1",
+  "description": "The Packfile implementation for JavaScript and TypeScript",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint",
+    "prepare": "pnpm run build",
+    "prepublishOnly": "pnpm run lint",
+    "preversion": "pnpm run lint",
+    "version": "pnpm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [],
+  "author": "sinjs",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^20.4.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.44.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  }
+}
