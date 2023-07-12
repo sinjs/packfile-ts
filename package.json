@@ -7,6 +7,10 @@
   "files": [
     "lib/**/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinjs/packfile-ts.git"
+  },
   "scripts": {
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
