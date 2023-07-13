@@ -1,6 +1,6 @@
 {
   "name": "@packfile/packfile-ts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Packfile implementation for JavaScript and TypeScript",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint",
     "test": "jest --config jestconfig.json",
     "prepare": "pnpm run build",
