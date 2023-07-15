@@ -34,12 +34,12 @@ describe("fetch packfile from url", () => {
   });
 
   test("valid object", async () => {
-    const packfile = fetchPackfileFromURL("https://valid-object.org");
+    const packfile = fetchPackfileFromURL("valid-object");
     expect(packfile).resolves.toBeInstanceOf(Packfile);
   });
 
   test("invalid object", async () => {
-    const packfile = fetchPackfileFromURL("https://wrong-object.org");
+    const packfile = fetchPackfileFromURL("wrong-object");
     expect(packfile).rejects.toContainInstanceOf(ValidationError);
   });
 });
