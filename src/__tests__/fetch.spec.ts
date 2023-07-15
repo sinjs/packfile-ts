@@ -6,13 +6,13 @@ import fs from "fs/promises";
 
 declare var fetch: jest.Mock;
 
-global.fetch = jest.fn(function (url: URL | string) {
-  if (url.toString().includes("valid-object")) {
+global.fetch = jest.fn(function (url: string) {
+  if (url.includes("valid-object")) {
     return Promise.resolve({
       json: () => Promise.resolve(validPackfileObj),
       ok: true,
     });
-  } else if (url.toString().includes("wrong-object")) {
+  } else if (url.includes("wrong-object")) {
     return Promise.resolve({
       json: () => Promise.resolve({}),
       ok: true,

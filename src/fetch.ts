@@ -5,8 +5,7 @@ import { isObject } from "class-validator";
 import * as path from "path";
 import * as fs from "fs/promises";
 
-export async function fetchPackfileFromURL(urlstr: string): Promise<Packfile> {
-  const url = new URL(urlstr);
+export async function fetchPackfileFromURL(url: string): Promise<Packfile> {
   const res = HttpResponseError.checkResponse(await fetch(url));
   const json = await res.json();
 
