@@ -2,8 +2,8 @@ import { HttpResponseError } from "./helper/http-error";
 import { Packfile } from "./export";
 import { objectToPackfile } from "./validate";
 import { isObject } from "class-validator";
-import * as path from "node:path";
-import * as fs from "node:fs/promises";
+import * as path from "path";
+import * as fs from "fs/promises";
 
 export async function fetchPackfileFromURL(urlstr: string): Promise<Packfile> {
   const url = new URL(urlstr);
@@ -20,7 +20,7 @@ export async function fetchPackfileFromURL(urlstr: string): Promise<Packfile> {
 export async function fetchPackfileFromPath(ipath: string): Promise<Packfile> {
   const fpath = path.resolve(ipath);
   const handle = await fs.open(fpath, "r");
-  const content = handle.readFile("utf-8");
+  const content = await handle.readFile("utf-8");
 
-  return objectToPackfile(content);
+  return await objectToPackfile(content);
 }
