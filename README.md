@@ -10,6 +10,8 @@ The official Packfile implementation for JavaScript and TypeScript
 
 ## Installation
 
+**This packages requires Node.js version `18` or above, due to the global fetch API required.**
+
 Use your favourite package manager to install!
 
 ```shell

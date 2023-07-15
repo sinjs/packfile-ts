@@ -1,6 +1,5 @@
 import { HttpResponseError } from "./helper/http-error";
 import { Packfile } from "./export";
-import fetch from "node-fetch";
 import { objectToPackfile } from "./validate";
 import { isObject } from "class-validator";
 import * as path from "node:path";

@@ -1,5 +1,3 @@
-import { Response } from "node-fetch";
-
 export class HttpResponseError extends Error {
   constructor(response: Response) {
     super(`Error ${response.status} ${response.statusText}`);
